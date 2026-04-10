@@ -1,4 +1,9 @@
-import { supabaseAdmin } from '@/lib/supabase'
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseAdmin = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co',
+  process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder'
+)
 import Link from 'next/link'
 import { formatDateShort } from '@/lib/utils'
 import { Plus, ChevronRight, HardHat, CheckCircle, Archive } from 'lucide-react'
