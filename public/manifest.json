@@ -1,0 +1,13 @@
+{
+  "name": "ACA Build Site Register",
+  "short_name": "ACA Register",
+  "description": "Trade sign-in and compliance for ACA Build sites",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2C1706",
+  "theme_color": "#2C1706",
+  "icons": [
+    { "src": "/logo.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/logo.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

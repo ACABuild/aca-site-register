@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #F7F2EA;
+  color: #0A0A0A;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-sepia text-cream font-semibold px-6 py-3 rounded-xl
+           hover:bg-walnut active:scale-95 transition-all duration-150
+           disabled:opacity-50 disabled:cursor-not-allowed w-full text-center;
+  }
+
+  .btn-secondary {
+    @apply bg-cream border-2 border-sepia text-sepia font-semibold px-6 py-3 rounded-xl
+           hover:bg-tan/20 active:scale-95 transition-all duration-150 w-full text-center;
+  }
+
+  .btn-ghost {
+    @apply text-sepia font-medium px-4 py-2 rounded-lg
+           hover:bg-sepia/10 active:scale-95 transition-all duration-150;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border-2 border-tan/40 bg-white
+           focus:outline-none focus:border-sepia focus:ring-2 focus:ring-sepia/20
+           text-carbon placeholder-tan font-medium transition-all;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-tan/20 p-5;
+  }
+
+  .badge-green  { @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800; }
+  .badge-yellow { @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800; }
+  .badge-red    { @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800; }
+  .badge-grey   { @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700; }
+}
